@@ -1,8 +1,7 @@
 import { categories } from "@/utils/constants"
 import { Stack } from "@mui/material"
 
-const Sidebar = () => {
-    const selectedCategory = "New"
+const Sidebar = ({ selectedCategory, setSelectedCategory}:any) => {
     return(
         <Stack
             direction={'row'}
@@ -16,6 +15,7 @@ const Sidebar = () => {
             {categories.map((category) => (
                 <button 
                     className="category-btn"
+                    onClick={() => setSelectedCategory(category.name)}
                     style={{
                         background: category.name === selectedCategory ? '#FC1503' : '#000', 
                         color: 'white',
