@@ -3,7 +3,7 @@ import { demoProfilePicture } from "@/utils/constants"
 import Link from "next/link"
 import { CheckCircle } from "@mui/icons-material"
 
-const ChannelCard = ({channelDetail}: any) => {
+const ChannelCard = ({channelDetail, marginTop}: any) => {
   return (
     <Box
         sx={{
@@ -14,7 +14,8 @@ const ChannelCard = ({channelDetail}: any) => {
             alignItems: 'center',
             width: { xs: '365px', md: '320px' },
             height: '326px',
-            margin: 'auto'
+            margin: 'auto',
+            marginTop: marginTop
         }}
     >
         <Link href={`/channel/${channelDetail?.id?.channelId}`}>

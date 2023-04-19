@@ -1,7 +1,7 @@
 import { categories } from "@/utils/constants"
 import { Stack } from "@mui/material"
 
-const Sidebar = ({ selectedCategory, setSelectedCategory}:any) => {
+const Sidebar = ({ selectedCategory, setSelectedCategory }:any) => {
     return(
         <Stack
             direction={'row'}
