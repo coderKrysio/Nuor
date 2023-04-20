@@ -2,17 +2,15 @@ import { Box, Typography } from "@mui/material"
 import Videos from "./Videos"
 import { fetchFromAPI } from "@/utils/fetchFromAPI"
 import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
 
-const SearchFeed = () => {
-    const router = useRouter();
-    const { searchterm } = router.query;
+const SearchFeed = ({searchterm}:{searchterm: string}) => {   
 
     const [videos, setVideos] = useState([])
 
     useEffect(() => {
         fetchFromAPI(`search?part=snippet&q=${searchterm}`).then((data) => {setVideos(data.items)})
-    }, [searchterm]);   
+    }, []);   
+
 
     return (
         <Box

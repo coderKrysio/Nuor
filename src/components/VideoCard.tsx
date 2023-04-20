@@ -8,7 +8,7 @@ const VideoCard = ({ video : { id: { videoId }, snippet }}: any) => {
     return (
         <Card
             sx={{
-                width: { xs: '100%', sm: '358px', md: "320px" },
+                width: { xs: '100%', sm: '358px', md: '320px' },
                 boxShadow: 'none',
                 borderRadius: 0
             }}
@@ -17,7 +17,7 @@ const VideoCard = ({ video : { id: { videoId }, snippet }}: any) => {
                 <CardMedia 
                     image={snippet?.thumbnails?.high?.url}
                     sx={{
-                        width: 358,
+                        width: { xs: '100%', sm: '358px', md: '320px' },
                         height: 180
                     }}
                 />
